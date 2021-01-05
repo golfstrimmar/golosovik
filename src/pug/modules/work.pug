@@ -2,28 +2,20 @@ section#work.work
  .work__wrapper
     .container
       .row
-        h2.common-Title Как мы работаем
-        ul.work__body
+        h2.common-Title Для чего предназначен
+          img.Component-2(src="assets/img/work/Component-2.svg",alt="img")
+        ul.work__body.row.justify-lg-content-between.justify-content-center 
             - 
               items = [
-                { title: "Комплексный подход ", description: "В клинике Dental&Beauty мы объединили   стоматологию и косметологию, чтобы сделать вас здоровыми, красивыми   и гармоничными.", img: "assets/img/work/img-14.svg "},
-                { title: "новации в области медицины ", description: "Мы изучаем новые медецинские технологии и   выбираем для вас самые эффективные и премиальные.", img: "assets/img/work/img-16.svg "},
-                { title: "Комплексный подход ", description: "Наши доктора работаютв индустрии больше 10 лет и им доверяют семьями.", img: "assets/img/work/img-11.svg "},
-                { title: "стерильность", description: "Дезинфекция и контроль стерильности - наша главная забота.", img: "assets/img/work/img-17.svg "},
+                { title: "Оценить возможность ", description: "Применения речевой аналитики в направлении «ГОСТЕПРЕИМСТВО» с помощью Wi-Fi аудиобейджа", img: "assets/img/work/work-1.svg "},
+                { title: "Применить ", description: "Аудиобейджи на регулярной основе в работе сотрудников служб Бронирования и Размещения", img: "assets/img/work/work-2.svg "},
+                { title: "Проанализировать ", description: "Качество распознавания речи, проверить корреляцию результатов анализа с текущими экспертными оценками сотрудников", img: "assets/img/work/work-3.svg "},
+               
               ]
 
             each item in items
-              li.work__item.work-item
+              li.work__item.work-item.col-12.col-lg-4.col-md-8
                 .work-item__body
                   img(src=item.img,alt="img").work-item__img
                   .work-item__title=item.title
-                  .work-item__description=item.description 
-        
-        ul.addFiles
-        .my-5
-        .alert.alert-warning.w-100(role='alert')
-          | Кнопка ниже открывает дополнительные карточки погружаем AJAX с внешнего файла, который лежит в корне. Поэтому AJAX достает его по GET запросу и без сервера.
-        .col.text-center.after-posts
-          button.btn.btn-outline-info.load-more(type='button') Показать еще
-            span.spinner-border.text-primary(role='status')
-             
+                  .work-item__description=item.description

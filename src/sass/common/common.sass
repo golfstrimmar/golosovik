@@ -1,9 +1,12 @@
+
+  
+  
 *
   outline: 1px solid red
   
 
 [class*="col-"]
-  padding: 0 0 0 0
+  // padding: 0 0 0 0
 
 
 // .font-main
@@ -20,7 +23,7 @@ body
   font-size: 16px
   line-height: 18px
   color: rgba(255, 255, 255, 0.7)
-  
+  +bg($body-color)
 .wrapper
   overflow: hidden
   @include fdc
@@ -177,11 +180,12 @@ input
 //   padding: 18px 20px	
 //   +media-breakpoint-only(xs)
 //     font-size: calc(12px + (18-12)*((100vw-320px)/(567-320)))!important
-// .common-Title
-//   font-size: 36px
-//   font-weight: normal
-//   line-height: 43px
-//   text-transform: uppercase
-//   padding: 0 0 3% 0	
-//   +media-breakpoint-only(xs)
-//     font-size: calc(20px + (36-20)*((100vw-320px)/(576-320))) 
+.common-Title
+  +font-family(Courier-reg,700,64px,55px,$title-color)
+  // font-size: 36px
+  // font-weight: normal
+  // line-height: 43px
+  // text-transform: uppercase
+  // padding: 0 0 3% 0	
+  // +media-breakpoint-only(xs)
+  //   font-size: calc(20px + (36-20)*((100vw-320px)/(576-320))) 

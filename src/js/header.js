@@ -15,8 +15,8 @@ wrapper.addEventListener("click", function (event) {
   
   if (event.target == burger) {
     menu.classList.add("header__menu_act");
-    menu.appendChild(service);
-    service.classList.add("header-service_act");
+    // menu.appendChild(service);
+    // service.classList.add("header-service_act");
     body.classList.add("lock");
 
   } else {
@@ -27,8 +27,8 @@ wrapper.addEventListener("click", function (event) {
     document.querySelector(".bg") !== event.target
   ) {
     menu.classList.remove("header__menu_act");
-    service.classList.remove("header-service_act");
-    header.appendChild(service);
+    // service.classList.remove("header-service_act");
+    // header.appendChild(service);
     body.classList.remove("lock");
   }
   }
@@ -44,8 +44,8 @@ window.addEventListener("resize", function (event) {
   if (document.documentElement.clientWidth > 992) {
     if (menu.classList.contains("header__menu_act")) {
       menu.classList.remove("header__menu_act");
-      service.classList.remove("header-service_act");
-      header.appendChild(service);
+      // service.classList.remove("header-service_act");
+      // header.appendChild(service);
       body.style.overflow = "visible";
       }
   } 

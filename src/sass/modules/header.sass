@@ -10,13 +10,14 @@
   // +bg($back-fone)
   +bg($dark-fone)
  
-  // &.responciveHeader
-  //   background-color: rgba(245,245,245, 0.9)
-  //   .header-menu__link
-  //     padding: 22px 5px	
-  //   .header__logo img
-  //     width: 50px
-  //     height: 50px
+  &.responciveHeader
+    +bg(rgba(15,15,58,.9))
+    .header-menu__link
+      padding: 22px 5px	
+    .header__logo img
+      width: 50px
+      height: 50px
+    
 
   .header__wrapper
     +pro
@@ -30,9 +31,8 @@
 
   .header__body
     +alic
-    // +media-breakpoint-only(lg)
-      // padding: 0 0 1% 0	
-
+    // @include media-breakpoint-down(md)
+    //   padding: 5px
   .header__logo
     flex: 0 1 60px
     +media-breakpoint-only(lg)
@@ -66,6 +66,7 @@
   +media-breakpoint-down(lg)
     flex: 0 1 22.5%
 .header-service__phone
+  +pro
   // +media-breakpoint-down(lg)
     // text-align: right
     // margin: 0 0 5px 0
@@ -129,7 +130,7 @@
   .header-menu__link
     +ts-1
     +pro
-    padding: 23px 5px   // <--- задает высоту  header 
+    padding: 53px 5px   // <--- задает высоту  header 
     +border(1px , transparent)
     &:hover
       +bg(lighten($dark-fone,20%))
@@ -146,61 +147,59 @@
 .header-close,.header-burger
   display: none
 //   // ---------------------------------------------------------------
-  
+
 +media-breakpoint-down(md)
   .header-burger
     margin: 0 0 0 auto
     font-size: 20px
     display: inline-block
+  .header__body
+    padding: 5px
   .header-close
   .header__logo
     flex: 0 1 20% 
+    img
+      width: 37px!important
+      height: 40px!important
   .header-menu
     width: 100vw
     min-height: 100vh
     position: fixed
     top: 0
     left: -100vw
-    padding: 117px 40px 0 40px
     overflow: auto
     text-align: right
+    margin: 0 0 0 0!important
+    z-index: 1000
+    padding: 94px 35px 0 0!important
     +fdc
     +jucs
     +alie
-    +bg(black)
+    +bg(rgba(15,15,58, .95))
+
   .header__menu_overlay
     position: relative
     +absolute( 100%, 100%, 0, 0, null,0,0) 
     opacity: .5
     z-index: 2
     z-index: 20
-    .bg
-      height: 50%
-      top: 50%
-      opacity: .2
-  .header-menu__item
   .header-menu__link
-    padding: 10px 
+    padding: 18px 5px!important 
     color: white
     position: relative
     z-index: 22
     display: inline-flex
     z-index: 20
+    font-size: 30px!important
   .header-service
-    display: none
-    z-index: 20
-    flex: 0 1 auto
-    width: 200px
-    &_act
-      display: inline-flex
-      margin: 40px 0 0 0
-    .header-service__phone
-      color: white
-      margin: 0 0 20px 0
+    flex: 0 1 177px
+    span 
+      font-size: 13px
+      line-height: 15px
   .header__menu_act
-    left: -30px
+    left: 0px
     & + .header__menu_overlay
-      left: -30px
+      left: 0px
   .header-close
     display: flex
     z-index: 1000

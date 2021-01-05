@@ -24,16 +24,22 @@ Permanent Marker
   calc(20px + (50-20)*((100vw-320px)/(1440-320))) 
   +absolute( 40px, 20px, 50%,  60%,  null,0,0)
   +absolute( $width, $height, $top,  $left,  $right,$x,$y) 
+  +absolute( $width, $height, $top,  $left,  $right,$x,$y) 
+
+
   @media (min-width: 0px) and (max-width: 1145px)
   +media-breakpoint-only(sm)
   +media-breakpoint-up(md)
   +media-breakpoint-down(lg)
   include  ./animals/connectForm
   @extend %procents
+  +bg()
   +bg($back-fone)
   +bg($active)
+  +bg(transparent)
   +bg($back-main)
   +border(1px,darken($active, 50%))
+  +border(1px,  )
   +flex
   +fdc
   +center
